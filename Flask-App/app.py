@@ -2,14 +2,14 @@ from flask import Flask, request, jsonify
 from covid import Covid
 from flask_cors import CORS
 import json
+
 c = Covid(source="worldometers")
-# print(c.get_status_by_country_name('India'))
-# w = Worldometer()
-# print(w.categories())
-# print(w.what_is_here())
-# print(w.)
+
 app = Flask(__name__)
 
+"""
+This will provide the summary of all the available countries
+"""
 @app.route('/')
 def get_status():
     data = c.get_data()
@@ -23,6 +23,9 @@ def get_status():
     } for d in data if int(d['population']) > 0 ]
     return jsonify(data)
 
+"""
+This will provide the one or more countries summary that were given in the query parameters
+"""
 @app.route('/country')
 def get_country_status():
     countries = request.args
