@@ -1,9 +1,7 @@
 # MintmeshAI-Assignment
 ## Problem - 1
 ### Problem Description
-Given a array of integers A of size N and an integer B.
-
-Return number of non-empty subsequences of A of size B having sum <= 1000.
+Given a array of integers A of size N and an integer B. Return number of non-empty subsequences of A of size B having sum <= 1000.
 
 Problem Constraints
 
@@ -16,9 +14,7 @@ Problem Constraints
 
 Input Format
 
-The rst argument given is the integer array A.
-
-The second argument given is the integer B.
+The rst argument given is the integer array A. The second argument given is the integer B.
 
 Output Format
 
